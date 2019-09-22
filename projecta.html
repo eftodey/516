@@ -4,6 +4,7 @@
 alert("Welcome to the number guessing game. Think of an integer between 1 and 100 (inclusive). If your number is greater than the program guess, type >. If your number is less than the program guess, type <. If the program guesses your number, type Yes. Let's begin!");
 
 let name = prompt("Is your number 50?"); 
+while (name != "Yes") {
 	if (name == "Yes") {
 	  alert("I won!");
 	}
@@ -13,6 +14,7 @@ let name = prompt("Is your number 50?");
 	else (number== ">") {
 	  prompt("Is your number 75?");
 	}
+}
 
 
 
