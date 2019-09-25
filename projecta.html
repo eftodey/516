@@ -1,22 +1,18 @@
 <script> 
 
-let range = (1, 100)
-let guess = 50
-let max = 100
-let min = 0
+let range = (1, 100);
+let guess = 50;
+let max = 100;
+let min = 1;
 
 let response = prompt("Is your number " + (Math.floor(range/2)) + "?");
 
 while(response != "yes") {
- 
   if(response == "<") {
-// range is 1-49
     max = guess
     guess = (Math.floor((max + min)/2))
     response = prompt("Is your number " + guess + "?");
-}
-  else if(response == ">") {
-// range is 51-100
+} else if(response == ">") {
     min = guess
     guess = (Math.floor((max + min)/2))
     response = prompt("Is your number " + guess + "?");
