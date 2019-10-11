@@ -1,0 +1,48 @@
+<html>
+
+<script>
+
+"use strict";
+
+let shift = Number(prompt("Enter shift")); //saves user's shift
+let originaltext = prompt("Enter text"); //saves user's text that needs to be encrypted
+let output = ''; //this is the output variable set to empty
+let i = 0; //starting point
+
+for (i = 0; i < originaltext.length; i++) {
+  let ASCIIcode = originaltext.charCodeAt(i); //turns originaltext to ASCII code, use i because we want it to start at 0
+
+  if (shift > 0) {
+	  if (ASCIIcode >= 65 && ASCIIcode <= 90) {
+		output += String.fromCharCode((ASCIIcode - 65 + shift) % 26 + 65); //turns ASCII code to encrypted text and also adds it to the output string (does two things at the same time)
+	  } else if (ASCIIcode >= 97 && ASCIIcode <= 122) {
+		output += String.fromCharCode((ASCIIcode - 97 + shift) % 26 + 97);
+	  } else {
+		output += originaltext.charAt(i); //doesn't change the remaining characters and then puts them back into the output string
+	  }
+	}
+  else {
+	  if (ASCIIcode >= 65 && ASCIIcode <= 90) {
+	    if ((ASCIIcode - 65 + shift) % 26 == 0) {
+		  output += String.fromCharCode(65); 
+		} else {
+			output += String.fromCharCode((ASCIIcode - 65 + shift) % 26 + 91);
+		} 
+	  } else if (ASCIIcode >= 97 && ASCIIcode <= 122) {
+		if ((ASCIIcode - 97 + shift) % 26 == 0) {
+		  output += String.fromCharCode(97);
+		  } else {
+			output += String.fromCharCode((ASCIIcode - 97 + shift) % 26 + 123);
+		  }  
+		}
+		else {
+			output += originaltext.charAt(i);
+		}
+	}
+}
+
+alert(output);
+
+</script>
+
+</html>
