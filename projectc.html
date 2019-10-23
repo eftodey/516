@@ -1,0 +1,34 @@
+<script>
+
+"use strict";
+
+const testBank = {
+  "on": ["The book is ___ the shelf.", "His hat is ___ his head.", "The computer is ___ the desk.", "The children like to sit ___ the floor when they eat.", "The money is ___ the counter."],
+  "in": ["There is milk ___ the fridge.", "She ran ___ the race.", "The cereal is ___ the pantry.", "London is ___ England.", "The children put the dishes ___ the dishwasher."],
+  "at": ["He lost his bag ___ the beach.", "She pointed her finger ___ him.", "She is good ___ sports.", "Please look ___ me when I'm talking to you.", "John leaves the house ___ 07h00."],
+  "with": ["He drew the picture___ a crayon.", "Please eat ___ a fork and knife.", "I like to cook ___ my friends.", "She is getting a ride ___ Tom.", "I frequently disagree ___ him."],
+  "by": ["The car drove ___ the house.", "I like to travel ___ myself.", "The man is living ___ himself.", "The children go to school ___ bus.", "We need the answer ___ tomorrow."],
+};
+let learnerModel = {"on": 0, "in": 0, "at": 0, "with": 0, "by": 0};
+let smallest = "on";
+
+while (true) {
+  for (let current in learnerModel) {
+    if(learnerModel[smallest] > learnerModel[current]) {
+      smallest = current;
+    }
+  }
+  let item = testBank[smallest][Math.floor(Math.random()*5)]; //picks a random example for the first time
+  let answer = prompt(item);
+  if(answer == smallest) {
+    alert("Correct!"); //and update the learnerModel
+    learnerModel[smallest]++;
+  } else {
+    alert(item.replace("___", smallest)); //sentence w/correct preposition 
+    learnerModel[smallest]--;
+  }
+}
+</script>
+
+
+
