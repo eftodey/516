@@ -1,0 +1,20 @@
+<script>
+
+"use strict";
+
+let originalmessage = prompt("Enter your input below");
+
+let holder = originalmessage.replace(/([aeiouy]+[^aeiouy]+)e\b/gi, "$1###"); 
+
+let output = holder.replace(/([aeiouy]+)/gi, "aig$1"); //this aig for all vowels
+
+let finalresult = output.replace(/###/g, "e"); //this deletes holder 
+
+alert(finalresult);
+
+</script>
+
+<!-- this is how you comment out outside of script  -->
+
+
+
