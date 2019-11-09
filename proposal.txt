@@ -1,0 +1,17 @@
+Introduction
+
+For the final project, I am proposing to move individual texts from one cell in an Excel file to an individual text file per text and then to segment these texts by sentence. 
+
+As a corpus linguist and ESP researcher/practitioner, this project is extremely valuable for numerous reasons. Move analys (Swales, 1990) is a time-consuming process that requires human intuition to determine the communicative goals and rhetorical strategies used by writers. Typically move analysis has been conducted on small data sets, however in my dissertation research, I am proposing to apply move analysis to a large, representative corpus that I will create using statements of purpose (SoPs) written by students who were accepted in a graduate program at Iowa State University. Within corpus composition, text cleaning is one of the most time consuming aspects. A program that can automatically organize the data in a meaningfully way will reduce the time commitment and will ideally allow me to include more texts in the corpus; this is especially important as I work to make an argument for representativeness of the target population. Considering this time-consuming nature of corpus creation, a project that automatically organizes texts into text files and segments the text per sentence would be an invaluable tool for researchers. 
+
+Proposed Project
+
+I have received de-identified SoPs from the Graduate College. For each admission cycle (e.g., Fall 2017, Spring 2018), the SoPs are located in one column in an Excel file and  other demographic data including country of origin, native speaker status, name of program the applicant is applying to, and the degree sought, are located in columns to the left. The program I intend to write would pull the SoP text from the cell in Excel and put it into a new text file. The demographic data would be pulled from the separate cells and included as a header in each document. 
+
+Within each text file, the text would also be segmented by sentence. In segmenting texts in Excel, I have already found that using the period is somewhat problematic because "Dr." and "Ph.D." occur frequently. I hope to resolve this by using regular expressions, but it is not a primary concern at this moment. 
+
+I also plan to have standard naming conventions for the SoP text files based on the information in the header. At this point I am most concerned about capturing the program name and type of degree sought. I envision the file name to be the abbreviation for the program name used by the Graduate College (e.g., Computer Science is COM S) and the abbreviation for the degree program (e.g., PHD, MS, and MA). The file name would look something like COM S_PHD_1 where the number at the end would change as I continue to add a SoP text for each program and degree. I might also include the year of application, but I am still not sure if this is necessary to include. All the files would ideally be saved into a folder on my desktop. 
+
+Implications
+
+A program of this nature will be valuable not only for my SoP dissertation data, but also for my future research as I intend to continue to employ corpus linguistics methodology and move analysis to analyze other written academic genres. I hope this program will be of value to me and also to my current and future collaborators to make corpus analysis more accessible to ESP researchers. 
