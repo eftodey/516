@@ -1,0 +1,70 @@
+<!Doctype html>
+<body>
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea> 
+<br>
+<button id="mybutton" onclick="process()">Process</button>
+<p>Output:<br>
+<textarea id="output" rows="10" cols="80"></textarea>
+
+<script>
+
+// this function will be invoked when the button is clicked
+function process() {
+  
+  let x = document.getElementById("input").value;
+  
+  x = x.replace(/[!.,':;"?]/g, ""); //removes punctuation
+  x = x.replace(/\s{2,}/g, " "); //removes extra white space
+  x = x.toUpperCase(); //puts all text in uppercase
+  
+  let token = x.split(" "); //takes the string and puts it into an array
+  console.log(token);
+  let type = [...new Set(token)]; //gets types from the tokens variable
+  
+  let ratio = type.length/token.length; //gets type token ratio
+  
+  let y = {}
+  let counter = 0; 
+  
+  for (let w of token) {
+	if (w in y){
+	  y[w] = y[w]+1;
+    } else {
+	    y[w]= 1;
+	  }
+  }
+
+console.log(y); 
+//   i = 0;
+//   while (i < token.length) {
+// // 	  console.log(token[i]);
+// 	  if (token[i] in y) {
+// 	    y.token[i] = 1;
+// 	  } 
+// // 	  else {
+// // 	    y[token[i]] = y[token[i]] + 1;
+// // 	  }
+// 	  i ++;
+//   }
+
+
+
+//  for(i = 0; i < token.length; i++) {
+//     for(m = 0; m < type.length; i++) {
+//       if(type[i] == token[m]) {
+//         
+//       }
+//     }
+//     y.type[i] = counter;  //we think this might not be working...
+//     counter = 0;
+//   counter++;
+//   }
+// }
+
+
+//alert(finalProduct);
+
+}
+</script>
+
+</body>
